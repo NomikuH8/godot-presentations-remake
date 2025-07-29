@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://c4o857g8bu466" path="res://components/theme_changer/theme_changer.gd" id="1_ixxja"]
 
-[node name="ThemeChanger" type="OptionButton"]
+[node name="ThemeChanger" type="HBoxContainer"]
 offset_right = 32.0
 offset_bottom = 20.0
-item_count = 1
-popup/item_0/id = 0
 script = ExtResource("1_ixxja")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Reload"

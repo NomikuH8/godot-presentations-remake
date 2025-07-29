@@ -1,25 +1,27 @@
 extends OptionButton
 
 
-var themes: Dictionary[String, String] = {}
+@onready var option_button: OptionButton = $OptionButton
 
 
 func _ready() -> void:
-	var dir := DirAccess.open("res://themes")
+	reload_themes()
 	
-	for file in dir.get_files():
-		if file.ends_with(".tres"):
-			var key := file.substr(file.rfind("/") + 1).replace(".tres", "")
-			themes[key] = file
-	
-	var popup := get_popup()
-	for id in themes.keys().size():
-		var key: String = themes.keys()[id]
-		popup.add_item(key, id)
-	
+	var popup := option_button.get_popup()
 	popup.id_pressed.connect(load_theme)
 
 
+func reload_themes() -> void:
+	var themes := ThemeManager.get_themes()
+	
+	var popup := option_button.get_popup()
+	popup.clear()
+	
+	for id in themes.size():
+		var current_theme := themes[id]
+		popup.add_item(current_theme.name, id)
+
+
 func load_theme(id: int):
-	var new_theme: String = themes.values()[id]
-	ThemeManager.set_theme(new_theme)
+	var theme_script: GPTheme = ThemeManager.get_themes()[id]
+	ThemeManager.set_theme(theme_script)

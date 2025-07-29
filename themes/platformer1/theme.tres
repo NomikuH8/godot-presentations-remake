@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GPTheme" load_steps=2 format=3 uid="uid://ulgtrkc67ooe"]
+
+[ext_resource type="Script" uid="uid://penf7oactvtd" path="res://resources/gp_theme.gd" id="1_x4nlh"]
+
+[resource]
+script = ExtResource("1_x4nlh")
+name = "theme"
+metadata/_custom_type_script = "uid://penf7oactvtd"
