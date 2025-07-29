@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtgk1k7q61yr5"]
+
+[ext_resource type="Script" uid="uid://br6cg28w56xp" path="res://screens/start_menu/start_menu.gd" id="1_6vprs"]
+[ext_resource type="Theme" uid="uid://du1jb7m6s5neo" path="res://assets/base_theme/base_theme.tres" id="2_1gu7p"]
+[ext_resource type="PackedScene" uid="uid://dcy68c4xxtmwk" path="res://components/theme_changer/theme_changer.tscn" id="3_yfj6c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vprs"]
+bg_color = Color(0, 0, 0, 0.117647)
+
+[node name="StartMenu" type="Node"]
+script = ExtResource("1_6vprs")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GeneralSettingsPanel" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme = ExtResource("2_1gu7p")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6vprs")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/GeneralSettingsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/GeneralSettingsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/GeneralSettingsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ThemeChanger" parent="UI/GeneralSettingsPanel/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("3_yfj6c")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/GeneralSettingsPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="CheckBox" type="CheckBox" parent="UI/GeneralSettingsPanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+button_pressed = true
+text = "FullScreen"

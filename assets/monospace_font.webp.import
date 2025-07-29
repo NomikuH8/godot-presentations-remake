@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://cj0aolekj1juj"
+path="res://.godot/imported/monospace_font.webp-2a88b2db285e4910d9c0b08fdde3a81e.fontdata"
+
+[deps]
+
+source_file="res://assets/monospace_font.webp"
+dest_files=["res://.godot/imported/monospace_font.webp-2a88b2db285e4910d9c0b08fdde3a81e.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("0-127")
+kerning_pairs=PackedStringArray()
+columns=16
+rows=8
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(2, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2
