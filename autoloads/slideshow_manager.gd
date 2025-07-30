@@ -6,19 +6,20 @@ signal slide_finished_animation()
 signal slide_changed(index: int)
 
 
+var initial_slide_index: int = 0
 var current_slide_index: int = 0
 var slide_quantity: int = 1
 
 
 func next_slide() -> void:
-	go_to_slide(current_slide_index + 1)
+	go_to_slide_by_index(current_slide_index + 1)
 
 
 func previous_slide() -> void:
-	go_to_slide(current_slide_index - 1)
+	go_to_slide_by_index(current_slide_index - 1)
 
 
-func go_to_slide(index: int) -> void:
+func go_to_slide_by_index(index: int) -> void:
 	if index < 0 or index > slide_quantity - 1:
 		return
 	

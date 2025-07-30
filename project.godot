@@ -30,6 +30,7 @@ window/stretch/aspect="ignore"
 [global_group]
 
 Slideshow="Slideshow node for controlling toolbar, slides appearance, etc."
+Toolbar="Toolbar scene, for updating some useful settings"
 
 [rendering]
 

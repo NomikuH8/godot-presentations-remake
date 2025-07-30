@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="GPTheme" load_steps=3 format=3 uid="uid://do7avl3qojdng"]
 
 [ext_resource type="Script" uid="uid://penf7oactvtd" path="res://resources/gp_theme.gd" id="1_x4nlh"]
-[ext_resource type="PackedScene" uid="uid://bd0oxqiv6stka" path="res://themes/platformer1/screens/start_menu_scene.tscn" id="2_bfcqr"]
+[ext_resource type="PackedScene" uid="uid://bd0oxqiv6stka" path="res://themes/platformer1/screens/start_menu/start_menu_scene.tscn" id="2_bfcqr"]
+
 
 [resource]
 script = ExtResource("1_x4nlh")

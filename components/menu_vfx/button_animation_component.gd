@@ -3,7 +3,7 @@ extends Node
 
 
 @export_category("Animation")
-@export var from_center: bool = true
+@export var from_center: bool = false
 @export var duration: float = 0.2
 @export var transition_type: Tween.TransitionType = Tween.TRANS_SINE
 @export var offset_position: Vector2 = Vector2(0.0, 0.0)
@@ -21,20 +21,23 @@ func _ready() -> void:
 		queue_free()
 		return
 	
-	parent = parent_button
-	
-	default_position = parent.global_position
-	default_scale = parent.scale
-	
 	if from_center:
-		parent.pivot_offset = parent.size / 2.0
+		parent_button.pivot_offset = parent_button.size / 2.0
+	
+	call_deferred("set_defaults", parent_button)
+
+
+func set_defaults(parent_button: BaseButton) -> void:
+	parent = parent_button
+	default_position = parent.position
+	default_scale = parent.scale
 	
 	parent.mouse_entered.connect(_parent_mouse_entered)
 	parent.mouse_exited.connect(_parent_mouse_exited)
 
 
 func _parent_mouse_entered() -> void:
-	var target_position := parent.position + offset_position
+	var target_position := default_position + offset_position
 	
 	var tween_position := get_tree().create_tween()
 	tween_position \
@@ -52,7 +55,11 @@ func _parent_mouse_exited() -> void:
 		return
 	
 	var tween_position := get_tree().create_tween()
-	tween_position.tween_property(parent, "position", default_position, duration).set_trans(transition_type)
+	tween_position \
+		.tween_property(parent, "position", default_position, duration) \
+		.set_trans(transition_type)
 	
 	var tween_scale := get_tree().create_tween()
-	tween_scale.tween_property(parent, "scale", default_scale, duration).set_trans(transition_type)
+	tween_scale \
+		.tween_property(parent, "scale", default_scale, duration) \
+		.set_trans(transition_type)
