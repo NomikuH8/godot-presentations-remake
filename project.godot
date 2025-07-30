@@ -18,14 +18,21 @@ config/icon="res://icon.svg"
 [autoload]
 
 ThemeManager="*res://autoloads/theme_manager.gd"
+SceneManager="*res://autoloads/scene_manager.gd"
+SlideshowManager="*res://autoloads/slideshow_manager.gd"
 
 [display]
 
-window/size/viewport_width=1024
-window/size/viewport_height=768
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/aspect="ignore"
+
+[global_group]
+
+Slideshow="Slideshow node for controlling toolbar, slides appearance, etc."
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

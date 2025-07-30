@@ -4,7 +4,7 @@ extends Node
 signal theme_changed(theme: GPTheme)
 
 
-var themes_dir: String = "res://themes"
+var themes_dir: String = "res://themes/"
 var current_theme: GPTheme
 
 
@@ -17,7 +17,7 @@ func get_themes() -> Array[GPTheme]:
 	
 	var themes: Array[GPTheme] = []
 	for directory in dir.get_directories():
-		var script := directory + "/theme.gd"
+		var script := themes_dir + directory + "/theme.tres"
 		if FileAccess.file_exists(script):
 			var loaded_script: GPTheme = load(script)
 			themes.append(loaded_script)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://wga10xk4j5vx"]
+
+[ext_resource type="Script" uid="uid://c6d4qqtmgkakw" path="res://components/general_settings/general_settings.gd" id="1_bot15"]
+
+[node name="GeneralSettings" type="HBoxContainer"]
+alignment = 2
+script = ExtResource("1_bot15")
+
+[node name="FullScreenCheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+focus_mode = 0
+text = "FullScreen"
+
+[node name="AspectRatio" type="OptionButton" parent="."]
+layout_mode = 2
+selected = 1
+item_count = 2
+popup/item_0/text = "4:3"
+popup/item_0/id = 0
+popup/item_1/text = "16:9"
+popup/item_1/id = 1

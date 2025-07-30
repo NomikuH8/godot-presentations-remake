@@ -9,7 +9,17 @@ script = ExtResource("1_ixxja")
 
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+fit_to_longest_item = false
 
-[node name="Button" type="Button" parent="."]
+[node name="ReloadButton" type="Button" parent="."]
 layout_mode = 2
+focus_mode = 0
 text = "Reload"
+
+[node name="AuthorLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Author: Someone"
+
+[connection signal="pressed" from="ReloadButton" to="." method="_on_reload_button_pressed"]

@@ -1,9 +1,9 @@
-[gd_resource type="Theme" load_steps=26 format=3 uid="uid://du1jb7m6s5neo"]
+[gd_resource type="Theme" load_steps=25 format=3 uid="uid://du1jb7m6s5neo"]
 
-[ext_resource type="FontFile" uid="uid://cj0aolekj1juj" path="res://assets/monospace_font.webp" id="1_k1t7a"]
 [ext_resource type="Texture2D" uid="uid://b7k6arc2pnl5x" path="res://assets/base_theme/checkbox/checkbox_checked.png" id="2_juhr3"]
 [ext_resource type="Texture2D" uid="uid://f1rusgr6pfuw" path="res://assets/base_theme/checkbox/checkbox_empty.png" id="3_52phh"]
-[ext_resource type="Texture2D" uid="uid://13476ydm7clf" path="res://assets/base_theme/panel/panel.png" id="4_juhr3"]
+[ext_resource type="StyleBox" uid="uid://dghbv3cvi41ix" path="res://assets/base_theme/resources/panel.tres" id="4_juhr3"]
+[ext_resource type="FontFile" uid="uid://dg5dtjjvy8xek" path="res://assets/font.png" id="5_52phh"]
 
 [sub_resource type="Image" id="Image_juhr3"]
 data = {
@@ -142,13 +142,6 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crptg"]
-texture = ExtResource("4_juhr3")
-texture_margin_left = 8.0
-texture_margin_top = 8.0
-texture_margin_right = 8.0
-texture_margin_bottom = 8.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4cga"]
 content_margin_left = 8.0
 content_margin_top = 4.0
@@ -162,13 +155,12 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [resource]
-default_font = ExtResource("1_k1t7a")
+default_font = ExtResource("5_52phh")
 default_font_size = 0
 CheckBox/constants/check_v_offset = 0
 CheckBox/constants/h_separation = 4
 CheckBox/constants/outline_size = 0
 CheckBox/font_sizes/font_size = 16
-CheckBox/fonts/font = ExtResource("1_k1t7a")
 CheckBox/icons/checked = ExtResource("2_juhr3")
 CheckBox/icons/checked_disabled = SubResource("ImageTexture_j2npa")
 CheckBox/icons/radio_checked = SubResource("ImageTexture_crptg")
@@ -195,10 +187,11 @@ OptionButton/constants/h_separation = 4
 OptionButton/constants/modulate_arrow = 0
 OptionButton/constants/outline_size = 0
 OptionButton/font_sizes/font_size = 16
-OptionButton/fonts/font = ExtResource("1_k1t7a")
 OptionButton/icons/arrow = SubResource("ImageTexture_unixo")
 OptionButton/styles/disabled = SubResource("StyleBoxFlat_j2npa")
 OptionButton/styles/focus = SubResource("StyleBoxFlat_kkwbw")
 OptionButton/styles/hover = SubResource("StyleBoxFlat_ojlmq")
-OptionButton/styles/normal = SubResource("StyleBoxTexture_crptg")
+OptionButton/styles/normal = ExtResource("4_juhr3")
 OptionButton/styles/pressed = SubResource("StyleBoxFlat_l4cga")
+Panel/styles/panel = ExtResource("4_juhr3")
+PanelContainer/styles/panel = ExtResource("4_juhr3")
