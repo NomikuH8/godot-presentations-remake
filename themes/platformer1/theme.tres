@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="GPTheme" load_steps=3 format=3 uid="uid://do7avl3qojdng"]
+[gd_resource type="Resource" script_class="GPTheme" load_steps=4 format=3 uid="uid://do7avl3qojdng"]
 
 [ext_resource type="Script" uid="uid://penf7oactvtd" path="res://resources/gp_theme.gd" id="1_x4nlh"]
-[ext_resource type="PackedScene" uid="uid://bd0oxqiv6stka" path="res://themes/platformer1/screens/start_menu/start_menu_scene.tscn" id="2_bfcqr"]
-
+[ext_resource type="PackedScene" uid="uid://ugkoxonb0xni" path="res://themes/platformer1/components/slides_container/slides_container_scene.tscn" id="2_s2myt"]
+[ext_resource type="PackedScene" uid="uid://bd0oxqiv6stka" path="res://themes/platformer1/components/start_menu/start_menu_scene.tscn" id="3_1psq6"]
 
 [resource]
 script = ExtResource("1_x4nlh")
 name = "Platformer 1"
 author = "NomikuH8"
-start_menu_scene = ExtResource("2_bfcqr")
+start_menu_scene = ExtResource("3_1psq6")
+slides_container_scene = ExtResource("2_s2myt")
 metadata/_custom_type_script = "uid://penf7oactvtd"

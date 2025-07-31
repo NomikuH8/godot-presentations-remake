@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd0oxqiv6stka"]
 
-[ext_resource type="Script" uid="uid://pc8m7h3sdh0m" path="res://themes/platformer1/screens/start_menu/start_menu_scene.gd" id="1_jf0k6"]
+[ext_resource type="Script" uid="uid://pc8m7h3sdh0m" path="res://themes/platformer1/components/start_menu/start_menu_scene.gd" id="1_jf0k6"]
 [ext_resource type="Script" uid="uid://cannc2oxa8eps" path="res://components/menu_vfx/button_animation_component.gd" id="2_ytbqj"]
+
 
 [node name="StartMenuScene" type="Control"]
 layout_mode = 3

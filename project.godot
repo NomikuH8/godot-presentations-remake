@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 ThemeManager="*res://autoloads/theme_manager.gd"
 SceneManager="*res://autoloads/scene_manager.gd"
 SlideshowManager="*res://autoloads/slideshow_manager.gd"
+GeneralSettingsManager="*res://autoloads/general_settings_manager.gd"
 
 [display]
 
@@ -31,6 +32,8 @@ window/stretch/aspect="ignore"
 
 Slideshow="Slideshow node for controlling toolbar, slides appearance, etc."
 Toolbar="Toolbar scene, for updating some useful settings"
+SlidesContainer="Wrapper for slides, will wrap the theme defined slide container"
+AspectRatioContainer="AspectRatioContainer for containing the slides and screens"
 
 [rendering]
 

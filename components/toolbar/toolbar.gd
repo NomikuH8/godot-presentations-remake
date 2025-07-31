@@ -44,3 +44,7 @@ func _on_previous_button_pressed() -> void:
 
 func _on_next_button_pressed() -> void:
 	SlideshowManager.next_slide()
+
+
+func _on_return_button_pressed() -> void:
+	SceneManager.go_to_start_menu()

@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="UI"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="UI" groups=["AspectRatioContainer"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,9 +45,8 @@ size_flags_horizontal = 3
 layout_mode = 2
 mouse_filter = 0
 
-[node name="GeneralSettings" parent="UI/AspectRatioContainer/VBoxContainer/GeneralSettingsPanel/HBoxContainer" node_paths=PackedStringArray("aspect_ratio_container") instance=ExtResource("4_yfj6c")]
+[node name="GeneralSettings" parent="UI/AspectRatioContainer/VBoxContainer/GeneralSettingsPanel/HBoxContainer" instance=ExtResource("4_yfj6c")]
 layout_mode = 2
-aspect_ratio_container = NodePath("../../../..")
 
 [node name="Menu" type="Control" parent="UI/AspectRatioContainer/VBoxContainer"]
 unique_name_in_owner = true
